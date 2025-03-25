@@ -9,6 +9,7 @@ function BookList() {
   const [totalPages, setTotalPages] = useState<number>(0);
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc'); // Sorting state
 
+  // This makes it so it only requests from the server when needed(changes)
   useEffect(() => {
     const fetchBooks = async () => {
       const response = await fetch(
@@ -46,6 +47,7 @@ function BookList() {
         Sort by Title ({sortOrder === 'asc' ? 'A → Z' : 'Z → A'})
       </button>
 
+      {/* Book cards */}
       {books.map((b) => (
         <div id="bookCard" className="card" key={b.bookId}>
           <h3 className="card-title">{b.title}</h3>
@@ -79,6 +81,7 @@ function BookList() {
         </div>
       ))}
 
+      {/* Buttons to change pages */}
       <button disabled={pageNum === 1} onClick={() => setPageNum(pageNum - 1)}>
         Previous
       </button>
@@ -101,6 +104,7 @@ function BookList() {
       </button>
       <br />
 
+      {/* Button to change the number of results per page */}
       <label>Results per page: </label>
       <select
         value={pageSize}
