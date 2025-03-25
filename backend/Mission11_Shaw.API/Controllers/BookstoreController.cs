@@ -16,9 +16,22 @@ namespace Mission11_Shaw.API.Controllers
         }
 
         [HttpGet("AllBooks")]
-        public IEnumerable<Book> GetBooks()
+        public IActionResult GetBooks(int pageSize = 5, int pageNum = 1)
         { 
-            return _Bookstorecontext.Books.ToList();
+            var books = _Bookstorecontext.Books
+                    .Skip((pageNum - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToList();
+
+            var totalNumBooks = _Bookstorecontext.Books.Count();
+
+            var someObject = new
+            {
+                Books = books,
+                TotalNumBooks = totalNumBooks
+            };
+
+            return Ok(someObject);
         }
 
         [HttpGet("OrderedBooks")]
