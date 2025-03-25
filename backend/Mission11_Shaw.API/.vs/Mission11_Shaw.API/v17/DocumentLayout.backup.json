@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,6 +66,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookstoreController.cs",
+              "DocumentMoniker": "C:\\Users\\awsha\\OneDrive - Brigham Young University\\Desktop\\Mission11_Shaw\\backend\\Mission11_Shaw.API\\Controllers\\BookstoreController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookstoreController.cs",
+              "ToolTip": "C:\\Users\\awsha\\OneDrive - Brigham Young University\\Desktop\\Mission11_Shaw\\backend\\Mission11_Shaw.API\\Controllers\\BookstoreController.cs",
+              "RelativeToolTip": "Controllers\\BookstoreController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:10:29.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\awsha\\OneDrive - Brigham Young University\\Desktop\\Mission11_Shaw\\backend\\Mission11_Shaw.API\\Properties\\launchSettings.json",
@@ -75,19 +88,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-03-22T05:05:47.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookstoreController.cs",
-              "DocumentMoniker": "C:\\Users\\awsha\\OneDrive - Brigham Young University\\Desktop\\Mission11_Shaw\\backend\\Mission11_Shaw.API\\Controllers\\BookstoreController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BookstoreController.cs",
-              "ToolTip": "C:\\Users\\awsha\\OneDrive - Brigham Young University\\Desktop\\Mission11_Shaw\\backend\\Mission11_Shaw.API\\Controllers\\BookstoreController.cs",
-              "RelativeToolTip": "Controllers\\BookstoreController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T04:10:29.032Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
