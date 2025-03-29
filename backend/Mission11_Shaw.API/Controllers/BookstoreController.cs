@@ -34,10 +34,15 @@ namespace Mission11_Shaw.API.Controllers
             return Ok(someObject);
         }
 
-        [HttpGet("OrderedBooks")]
-        public IEnumerable<Book> GetBooksOrdered()
+        [HttpGet("GetBookCategories")]
+        public IActionResult GetBookCategories()
         {
-            return _Bookstorecontext.Books.OrderBy(b => b.Title).ToList();
+            var bookCategories = _Bookstorecontext.Books
+                .Select(b => b.Category)
+                .Distinct()
+                .ToList();
+
+            return Ok(bookCategories);
         }
 
     }

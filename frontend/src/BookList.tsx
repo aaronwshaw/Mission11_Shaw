@@ -40,16 +40,13 @@ function BookList() {
 
   return (
     <>
-      <h1>List of Books</h1>
-      <br />
-
-      <button onClick={sortBooksByTitle}>
-        Sort by Title ({sortOrder === 'asc' ? 'A → Z' : 'Z → A'})
-      </button>
-
       {/* Book cards */}
       {books.map((b) => (
-        <div id="bookCard" className="card" key={b.bookId}>
+        <div
+          id="bookCard"
+          className="card shadow-lg p-3 mb-3 bg-light border-0 rounded-4 hover-effect"
+          key={b.bookId}
+        >
           <h3 className="card-title">{b.title}</h3>
           <div className="card-body">
             <ul className="list-unstyled">
@@ -82,26 +79,32 @@ function BookList() {
       ))}
 
       {/* Buttons to change pages */}
-      <button disabled={pageNum === 1} onClick={() => setPageNum(pageNum - 1)}>
-        Previous
+      <button
+        className="btn btn-outline-primary mx-1"
+        disabled={pageNum === 1}
+        onClick={() => setPageNum(pageNum - 1)}
+      >
+        <i className="bi bi-chevron-left"></i> Previous
       </button>
 
       {[...Array(totalPages)].map((_, i) => (
         <button
           key={i + 1}
+          className={`btn ${pageNum === i + 1 ? 'btn-primary' : 'btn-outline-primary'} mx-1`}
           onClick={() => setPageNum(i + 1)}
-          disabled={pageNum === i + 1}
         >
           {i + 1}
         </button>
       ))}
 
       <button
+        className="btn btn-outline-primary mx-1"
         disabled={pageNum === totalPages}
         onClick={() => setPageNum(pageNum + 1)}
       >
-        Next
+        Next <i className="bi bi-chevron-right"></i>
       </button>
+
       <br />
 
       {/* Button to change the number of results per page */}
@@ -117,6 +120,11 @@ function BookList() {
         <option value="10">10</option>
         <option value="20">20</option>
       </select>
+
+      <br />
+      <button onClick={sortBooksByTitle}>
+        Sort by Title ({sortOrder === 'asc' ? 'A → Z' : 'Z → A'})
+      </button>
     </>
   );
 }
