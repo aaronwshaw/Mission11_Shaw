@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react';
 
-function CategoryFilter() {
+function CategoryFilter({
+  selectedCategories,
+  setSelectedCategories,
+}: {
+  selectedCategories: string[];
+  setSelectedCategories: (categories: string[]) => void;
+}) {
   const [categories, setCategories] = useState<string[]>([]);
 
   useEffect(() => {
@@ -21,6 +27,13 @@ function CategoryFilter() {
     fetchCategories();
   }, []);
 
+  function handleCheckboxChange({ target }: { target: HTMLInputElement }) {
+    const updatedCategories = selectedCategories.includes(target.value)
+      ? selectedCategories.filter((x) => x !== target.value)
+      : [...selectedCategories, target.value];
+    setSelectedCategories(updatedCategories);
+  }
+
   return (
     <>
       <div
@@ -36,6 +49,7 @@ function CategoryFilter() {
                 type="checkbox"
                 id={c}
                 value={c}
+                onChange={handleCheckboxChange}
               />
               <label className="form-check-label" htmlFor={c}>
                 {c}

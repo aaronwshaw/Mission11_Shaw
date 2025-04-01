@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Book } from './types/Book';
 
-function BookList() {
+function BookList({ selectedCategories }: { selectedCategories: string[] }) {
   const [books, setBooks] = useState<Book[]>([]);
   const [pageSize, setPageSize] = useState<number>(5);
   const [pageNum, setPageNum] = useState<number>(1);
@@ -12,8 +12,12 @@ function BookList() {
   // This makes it so it only requests from the server when needed(changes)
   useEffect(() => {
     const fetchBooks = async () => {
+      const categoryParams = selectedCategories
+        .map((cat) => `selectedCategories=${encodeURIComponent(cat)}`)
+        .join('&');
+
       const response = await fetch(
-        `https://localhost:5000/bookstore/allbooks?pageSize=${pageSize}&pageNum=${pageNum}`
+        `https://localhost:5000/bookstore/allbooks?pageSize=${pageSize}&pageNum=${pageNum}${selectedCategories.length ? `&${categoryParams}` : ''}`
       );
       const data = await response.json();
 
@@ -22,7 +26,7 @@ function BookList() {
       setTotalPages(Math.ceil(totalNumBooks / pageSize));
     };
     fetchBooks();
-  }, [pageSize, pageNum, totalNumBooks]);
+  }, [pageSize, pageNum, totalNumBooks, selectedCategories]);
 
   // Sorting function
   const sortBooksByTitle = () => {

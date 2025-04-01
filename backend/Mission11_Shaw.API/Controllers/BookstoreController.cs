@@ -16,14 +16,21 @@ namespace Mission11_Shaw.API.Controllers
         }
 
         [HttpGet("AllBooks")]
-        public IActionResult GetBooks(int pageSize = 5, int pageNum = 1)
+        public IActionResult GetBooks(int pageSize = 5, int pageNum = 1, [FromQuery] List<string>? selectedCategories = null)
         { 
-            var books = _Bookstorecontext.Books
+            var query = _Bookstorecontext.Books.AsQueryable();
+
+            if (selectedCategories != null && selectedCategories.Any())
+            {
+                query = query.Where(b => selectedCategories.Contains(b.Category));
+            }
+
+            var totalNumBooks = query.Count();
+
+            var books = query
                     .Skip((pageNum - 1) * pageSize)
                     .Take(pageSize)
                     .ToList();
-
-            var totalNumBooks = _Bookstorecontext.Books.Count();
 
             var someObject = new
             {
