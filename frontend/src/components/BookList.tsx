@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Book } from './types/Book';
+import { Book } from '../types/Book';
+import { useNavigate } from 'react-router-dom';
 
 function BookList({ selectedCategories }: { selectedCategories: string[] }) {
   const [books, setBooks] = useState<Book[]>([]);
@@ -8,6 +9,7 @@ function BookList({ selectedCategories }: { selectedCategories: string[] }) {
   const [totalNumBooks, setTotalNumBooks] = useState<number>(0);
   const [totalPages, setTotalPages] = useState<number>(0);
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc'); // Sorting state
+  const navigate = useNavigate();
 
   // This makes it so it only requests from the server when needed(changes)
   useEffect(() => {
@@ -78,6 +80,13 @@ function BookList({ selectedCategories }: { selectedCategories: string[] }) {
                 <strong>Price: </strong>${b.price}
               </li>
             </ul>
+
+            <button
+              className="btn btn-success"
+              onClick={() => navigate(`/buy/${b.title}/${b.bookId}/${b.price}`)}
+            >
+              Buy
+            </button>
           </div>
         </div>
       ))}

@@ -129,7 +129,6 @@ C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backen
 C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Mission11_Shaw.API.props
 C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Mission11_Shaw.API.props
 C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\obj\Debug\net8.0\Mission1.FE707030.Up2Date
 C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\obj\Debug\net8.0\Mission11_Shaw.API.dll
 C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\obj\Debug\net8.0\refint\Mission11_Shaw.API.dll
