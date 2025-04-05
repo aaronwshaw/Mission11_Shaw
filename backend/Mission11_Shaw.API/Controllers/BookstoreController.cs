@@ -52,5 +52,49 @@ namespace Mission11_Shaw.API.Controllers
             return Ok(bookCategories);
         }
 
+        [HttpPost("AddBook")]
+        public IActionResult AddBook([FromBody] Book newBook)
+        {
+            _Bookstorecontext.Books.Add(newBook);
+            _Bookstorecontext.SaveChanges();
+            return Ok(newBook);
+        }
+
+        [HttpPut("UpdateBook/{bookId}")]
+        public IActionResult UpdateBook(int bookId, [FromBody] Book updatedBook)
+        {
+            var existingBook = _Bookstorecontext.Books.Find(bookId);
+
+            existingBook.Title = updatedBook.Title;
+            existingBook.Author = updatedBook.Author;
+            existingBook.Publisher = updatedBook.Publisher;
+            existingBook.Isbn = updatedBook.Isbn;
+            existingBook.Classification = updatedBook.Classification;
+            existingBook.Category = updatedBook.Category;
+            existingBook.PageCount = updatedBook.PageCount;
+            existingBook.Price = updatedBook.Price;
+
+            _Bookstorecontext.Books.Update(existingBook);
+            _Bookstorecontext.SaveChanges();
+
+            return Ok(existingBook);
+        }
+
+        [HttpDelete("DeleteBook/{bookId}")]
+        public IActionResult DeleteBook(int bookId)
+        {
+            var Book = _Bookstorecontext.Books.Find(bookId);
+
+            if (Book == null)
+            {
+                return NotFound(new {message = "Book not found"});
+            }
+
+            _Bookstorecontext.Books.Remove(Book);
+            _Bookstorecontext.SaveChanges();
+
+            return NoContent();
+        }
+
     }
 }
