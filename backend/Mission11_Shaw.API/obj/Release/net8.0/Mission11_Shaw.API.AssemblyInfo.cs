@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mission11_Shaw.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b368569688ff756767a2e68af8f3642db115f6c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0d09ed9b1d3676eacc70adf83d73e709441f0ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mission11_Shaw.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mission11_Shaw.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

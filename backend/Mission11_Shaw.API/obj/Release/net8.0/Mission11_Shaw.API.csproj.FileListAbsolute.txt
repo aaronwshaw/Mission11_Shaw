@@ -136,3 +136,9 @@ C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backen
 C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\obj\Release\net8.0\Mission11_Shaw.API.pdb
 C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\obj\Release\net8.0\Mission11_Shaw.API.genruntimeconfig.cache
 C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\obj\Release\net8.0\ref\Mission11_Shaw.API.dll
+C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\bin\Release\net8.0\publish\web.config
+C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\bin\Release\net8.0\publish\appsettings.json
+C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\bin\Release\net8.0\publish\Mission11_Shaw.API.deps.json
+C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\bin\Release\net8.0\publish\Mission11_Shaw.API.runtimeconfig.json
+C:\Users\awsha\OneDrive - Brigham Young University\Desktop\Mission11_Shaw\backend\Mission11_Shaw.API\bin\Release\net8.0\publish\Mission11_Shaw.API.staticwebassets.endpoints.json
