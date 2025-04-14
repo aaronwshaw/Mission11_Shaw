@@ -66,3 +66,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Style for my BookList.tsx bookCard */
+.hover-effect:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
